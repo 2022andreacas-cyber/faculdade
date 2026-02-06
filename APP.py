@@ -6,6 +6,7 @@ from abc import ABC, abstractmethod
 import csv
 
 
+
 class Imovel(ABC):
     @abstractmethod
     def calcular_aluguel(self) -> float:
@@ -105,6 +106,7 @@ class Orcamento:
             writer.writeheader()
             writer.writerows(linhas)
 
+# Entrada de dados
 
 def ler_int(msg: str, validos: set[int] | None = None, minimo: int | None = None, maximo: int | None = None) -> int:
     while True:
@@ -133,7 +135,7 @@ def ler_sn(msg: str) -> bool:
             return False
         print("Responda com S/N.")
 
-
+# Menu da APP
 
 def main():
     print("\n=== Imobiliária R.M - Orçamento de Aluguel ===")
